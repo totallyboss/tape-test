@@ -1,10 +1,17 @@
-var test = require('tape');
-var siteSearch = require('../lib/search-sort.js');
-var mySiteSearch = new siteSearch();
+const test = require('tape');
+const siteSearch = require('../lib/site-search.js');
+const mySiteSearch = new siteSearch();
 
-test('searchSort should return Sup', function(t) {
-    var result = mySiteSearch.searchSort();
-    var expected = 'Sup';
+test('searchSort should return Sup', (t) => {
+    const result = mySiteSearch.searchSort();
+    const expected = 'Sup';
+    t.deepEqual(result, expected);
+    t.end();
+});
+
+test('searchSort should return the sum', (t) => {
+    const result = mySiteSearch.searchOkay(1,2);
+    const expected = 3;
     t.deepEqual(result, expected);
     t.end();
 });
