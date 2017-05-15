@@ -1,8 +1,9 @@
 var test = require('tape');
-var searchSort = require('../lib/search-sort.js');
+var siteSearch = require('../lib/search-sort.js');
+var mySiteSearch = new siteSearch();
 
 test('searchSort should return Sup', function(t) {
-    var result = searchSort();
+    var result = mySiteSearch.searchSort();
     var expected = 'Sup';
     t.deepEqual(result, expected);
     t.end();
