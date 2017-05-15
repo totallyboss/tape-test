@@ -31,3 +31,7 @@ test('calculateChange(1487, 10000) should equal [5000, 2000, 1000, 500, 10, 2, 1
     t.deepEqual(result, expected);
     t.end();
 });
+
+
+// to run
+// node test/change-calculator.test.js
